@@ -1,0 +1,25 @@
+<form (onSubmit)="onSubmit()">
+  <input type="hidden" formControlName="$key">
+  <div class="form-group">
+    <label>Enter Train Name</label>
+    <div class="form-group">
+      <label for="sel1">Select list:</label>
+      <select class="form-control" id="sel1">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+      </select>
+    </div>
+    <div class="invalid-feedback" *ngIf="submitted && formControl.username.errors">
+      this field is required
+    </div>
+  </div>
+  <div class="form-group">
+    <input type="submit" class="btn btn-primary" value="Submit">
+  </div>
+  <div class="alert alert-info" *ngIf="showSuccessMassage">
+    removed Successfully.
+  </div>
+</form>
+
